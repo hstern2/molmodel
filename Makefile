@@ -3,11 +3,11 @@ CXX = g++
 CFLAGS = -Iinclude -Wall
 CXXFLAGS = -Iinclude -Wall
 OBJS = obj/geoprog.o obj/geograd.o
-EXEC = bin/geoprog
+EXEC = bin/geo
 
 all: $(EXEC)
 
-bin/geoprog: obj/geoprog.o obj/geograd.o obj/fns.o
+bin/geo: obj/geoprog.o obj/geograd.o obj/fns.o
 	$(CC) -o $@ $^
 obj/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
