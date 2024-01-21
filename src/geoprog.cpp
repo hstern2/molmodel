@@ -1,9 +1,7 @@
-/* $Id: geoprog.C,v 1.4 2006/02/14 18:09:35 hstern Exp hstern2 $ */
-
-#include "coord.h"
+#include "coord.hpp"
 #include "units.h"
-#include "geograd.h"
-#include "out.h"
+#include "geograd.hpp"
+#include "out.hpp"
 #include <cstdlib>
 #include <cstring>
 

@@ -1,28 +1,10 @@
-/* $Id: coord.h,v 1.53 2009/04/13 15:07:55 hstern Exp $ */
-
-/*
- * Copyright (c) 2008 Harry A. Stern
- * Copyright (c) 2008 University of Rochester
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- */
-
 #ifndef COORD_H
 #define COORD_H
 
 #include <cmath>
 #include <cassert>
 #include "cart.h"
-#include "out.h"
+#include "out.hpp"
 
 class Cartesian : public cart_t
 {
