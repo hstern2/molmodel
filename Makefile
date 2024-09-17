@@ -10,15 +10,15 @@ all: test
 test: $(EXEC) $(OBJS)
 
 bin/geo: obj/geoprog.o obj/geograd.o obj/fns.o
-	$(CC) -o $@ $^
+	$(CXX) -o $@ $^ -lm
 bin/cgmin-example: src/cgmin.c
-	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^
+	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ -lm
 bin/pppm-example: src/pppm.c obj/array.o obj/util.o
-	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ -lgsl -lcblas -lfftw3
+	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ -lgsl -lfftw3 -lm
 obj/%.o: src/%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -lm
 obj/%.o: src/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@ -lm
 clean:
 	rm -f obj/*.o $(EXEC)
 test:
