@@ -27,10 +27,10 @@ bin/pppm-example: src/pppm.c obj/array.o obj/util.o
 	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ -lgsl -lfftw3 $(BLAS_LIB) -lm
 
 obj/%.o: src/%.c
-	$(CC) $(CFLAGS) -c $< -o $@ -lm
+	$(CC) $(CFLAGS) -c $< -o $@
 
 obj/%.o: src/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@ -lm
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f obj/*.o $(EXEC)
