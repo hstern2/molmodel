@@ -2,7 +2,8 @@ CC = gcc
 CXX = g++
 CFLAGS = -Iinclude -Wall
 CXXFLAGS = -Iinclude -Wall
-OBJS = obj/geoprog.o obj/geograd.o obj/kspace.o obj/pppm.o obj/array.o obj/util.o obj/cgmin.o
+SRC = $(wildcard src/*.c src/*.cpp)
+OBJS = $(patsubst src/%.c, obj/%.o, $(SRC))
 EXEC = bin/geo bin/cgmin-example bin/pppm-example
 
 # Platform-specific libraries
