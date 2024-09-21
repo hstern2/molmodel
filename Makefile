@@ -23,7 +23,7 @@ bin/geo: obj/geoprog.o obj/geograd.o obj/fns.o
 bin/cgmin-example: src/cgmin.c
 	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ $(BLAS_LIB) -lm
 
-bin/pppm-example: src/pppm.c obj/array.o obj/util.o
+bin/pppm-example: obj/pppm.o obj/array.o obj/util.o obj/pppm-example.o
 	$(CC) $(CFLAGS) -DSIMPLE_EXAMPLE -o $@ $^ -lgsl -lfftw3 $(BLAS_LIB) -lm
 
 obj/%.o: src/%.c

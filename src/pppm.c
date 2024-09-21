@@ -714,10 +714,3 @@ void p3m_optimize(p3m_t that,
   gsl_vector_free(x);
   gsl_vector_free(step);
 }
-
-#ifdef SIMPLE_EXAMPLE
-int main() {
-  printf("hello world\n");
-  return 0;
-}
-#endif /* SIMPLE_EXAMPLE */

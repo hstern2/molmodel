@@ -1,5 +1,3 @@
-/* $Id: rspace.h,v 1.17 2010/09/13 18:13:44 hstern Exp $ */
-
 #ifndef RSPACE_H
 #define RSPACE_H
 
