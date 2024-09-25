@@ -1,5 +1,3 @@
-/* $Id: cheby.h,v 1.4 2005/08/25 23:34:14 hstern Exp $ */
-
 #ifndef CHEBY_H
 #define CHEBY_H
 
