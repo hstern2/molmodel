@@ -1,6 +1,6 @@
 #include "rmsd.hpp"
 #include "cvec.hpp"
-#include "lapack.hpp"
+#include "linalg.hpp"
 #include "fns.h"
 
 /***

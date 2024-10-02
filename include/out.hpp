@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <iostream>
 #include <cassert>
+#include "util.h"
 using namespace std;
 
 #define classIO(T) \
@@ -34,7 +35,6 @@ ostream &Out();
 ostream *FileStream(const char *);
 ostream *AppendFileStream(const char *);
 
-bool end_of_file(FILE *);
 class Str;
 void TempName(Str &);
 void IndentPush();
@@ -44,6 +44,5 @@ const char *Indent();
 class FatalException { };
 
 #define insist(x) assert(x)
-void die(const char *s, ...);
 
 #endif /* OUT_H */

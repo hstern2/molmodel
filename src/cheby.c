@@ -1,5 +1,3 @@
-/* $Id: cheby.c,v 1.3 2005/02/21 18:25:27 hstern Exp $ */
-
 #include <math.h>
 #include <assert.h>
 #include <stdlib.h>

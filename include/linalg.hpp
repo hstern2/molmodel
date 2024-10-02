@@ -1,11 +1,9 @@
-/* $Id: linalg.h,v 1.10 2010/06/22 15:48:04 hstern Exp $ */
-
 #ifndef LINALG_H
 #define LINALG_H
 
-#include "dmat.h"
-#include "dvec.h"
-#include "coord.h"
+#include "dmat.hpp"
+#include "dvec.hpp"
+#include "coord.hpp"
 
 /**
  * solve Ax = b

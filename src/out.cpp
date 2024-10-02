@@ -131,15 +131,6 @@ ostream *AppendFileStream(const char *fname)
   return f;
 }
 
-bool end_of_file(FILE *f)
-{
-  int c = fgetc(f);
-  if (c == EOF)
-    return true;
-  ungetc(c, f);
-  return false;
-}
-
 static char spaces[21] = "                    ";
 static int spi = 20;
 
@@ -172,16 +163,4 @@ void OutPrintf(const char *fmt, ...)
   va_end(argp);
   Out() << ret;
   free(ret);
-}
-
-void die(const char *fmt, ...)
-{
-  va_list argp;
-  va_start(argp, fmt);
-  char *ret;
-  vasprintf(&ret, fmt, argp);
-  va_end(argp);
-  Out() << ret << "\n" << flush;
-  free(ret);
-  throw FatalException();
 }

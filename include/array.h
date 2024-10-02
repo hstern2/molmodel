@@ -87,6 +87,7 @@ extern "C" {
   ARRAY_DECLARATION(cart_t);
   ARRAY_DECLARATION(icart_t);
   ARRAY_DECLARATION(complex_t);
+  ARRAY_DECLARATION(const_ptr_t);
 
 #ifdef __cplusplus
 }
