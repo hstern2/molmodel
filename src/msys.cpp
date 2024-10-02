@@ -739,7 +739,7 @@ void MSys::create_from_csd(Str s)
   if (!fgets(buf, 256, f) || buf[strlen(buf)-1] != '\n')
     die("MSys::create_from_xyz: error reading csd file '%s'", (const char *) s);
   /* Read CELL description */
-  while (fgets(buf, 1024, f) && strncmp(buf, "CELL", 4))
+  while (fgets(buf, 256, f) && strncmp(buf, "CELL", 4))
     ;
   if (strncmp(buf, "CELL", 4))
     die("MSys::create_from_csd: cannot find 'CELL' in file %s", (const char *) s);

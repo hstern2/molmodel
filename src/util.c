@@ -22,6 +22,7 @@ void die(const char *fmt, ...)
   sprintf(buf, "%s\n", ret);
   free(ret);
   fprintf(stderr, "%s\n", buf);
+  exit(1);
 }
 
 void *safe_malloc(size_t size)

@@ -54,7 +54,10 @@ public:
     return v;
   }
   void zero()
-  { memset((Cartesian *) *this, 0, size()*sizeof(Cartesian)); }
+  {
+    for (int i = 0; i < size(); i++)
+      (*this)[i].zero();
+  }
   friend double operator*(const CVec a, const CVec b)
   {
     double c = 0.0;
