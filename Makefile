@@ -4,7 +4,7 @@ CFLAGS = -Iinclude -Wall
 CXXFLAGS = -Iinclude -Wall
 SRC = $(wildcard src/*.c src/*.cpp)
 OBJS = $(patsubst src/%.c, obj/%.o, $(SRC)) $(patsubst src/%.cpp, obj/%.o, $(SRC))
-EXEC = bin/geo bin/cgmin-example bin/pppm-example bin/rmsd bin/msim
+EXEC = bin/geo bin/cgmin-example bin/pppm-example bin/rmsd bin/msim bin/hist
 
 # Platform-specific libraries
 UNAME_S := $(shell uname -s)
@@ -44,6 +44,9 @@ bin/pppm-example: obj/pppm.o obj/array.o obj/util.o obj/pppm-example.o
 
 bin/rmsd: obj/rmsdprog.o obj/rmsd.o obj/out.o obj/linalg.o obj/fns.o obj/util.o obj/array.o
 	$(CXX) -o $@ $^ $(BLAS_LIB) -lm
+
+bin/hist: obj/hist.o obj/histoprog.o obj/out.o obj/random.o obj/util.o
+	$(CXX) -o $@ $^ -lm
 
 obj/%.o: src/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
