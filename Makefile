@@ -9,7 +9,7 @@ EXEC = bin/geo bin/cgmin-example bin/pppm-example bin/rmsd bin/msim bin/hist
 # Platform-specific libraries
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S), Darwin) # macOS
-    BLAS_LIB = -L/opt/homebrew/opt/openblas/lib -lopenblas
+    BLAS_LIB = -framework Accelerate
 else # Assuming Linux (Ubuntu)
     BLAS_LIB = -lopenblas
 endif
