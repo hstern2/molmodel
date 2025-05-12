@@ -29,5 +29,5 @@ cmake .. && make
 
 * **geo**: geometry calculations
 * **msim**: molecular dynamics simulations
-* **rmsd**: calculates root-mean-square deviation between two structures.
+* **rmsd**: root-mean-square deviation between two structures
 * **hist**: histograms
