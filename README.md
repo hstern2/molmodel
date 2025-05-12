@@ -10,7 +10,8 @@ requires Xcode command‑line tools (`clang`, `cmake`, etc.)
 
 ```bash
 brew update
-brew install fftw gsl
+brew install fftw --build-from-source
+brew install gsl
 mkdir build && cd build
 cmake .. && make
 ```
